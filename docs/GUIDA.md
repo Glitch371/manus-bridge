@@ -123,8 +123,8 @@ il server e il tunnel funzionano correttamente.
 
 ## 6. Parte 3 — Configurazione della skill su Manus
 
-1. Carica il file `blender-manager.skill` (lo trovi nella cartella `skill/` del
-   repository, oppure riconfezionato come `.skill`) tra le skill del tuo agente Manus.
+1. Scarica il file `blender-manager.skill` dalla radice del repository e caricalo
+   tra le skill del tuo agente Manus.
 2. Nelle istruzioni di progetto o nel primo messaggio della sessione, **comunica a
    Manus l'URL del tunnel ngrok**. Esempio:
 
