@@ -57,7 +57,7 @@ Lo stato passa a *Connesso (Porta 9999)*.
 ngrok http 9999
 ```
 
-Copia l'URL pubblico (es. `https://xxxx.ngrok-free.app`) e passalo a Manus.
+Copia l'URL pubblico (es. `https://xxxx.ngrok-free.dev`) e passalo a Manus.
 
 ### 3. Skill (lato Manus)
 
@@ -78,7 +78,7 @@ def send_command(url, command):
     return requests.post(url, json=payload, headers=headers).json()
 
 send_command(
-    "https://xxxx.ngrok-free.app",
+    "https://xxxx.ngrok-free.dev",
     "bpy.ops.mesh.primitive_cube_add(location=(0, 0, 0))"
 )
 ```

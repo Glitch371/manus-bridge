@@ -105,14 +105,22 @@ ngrok http 9999
 ngrok mostrerà un URL pubblico simile a:
 
 ```
-Forwarding   https://1a2b-3c4d.ngrok-free.app -> http://localhost:9999
+Forwarding   https://1a2b-3c4d.ngrok-free.dev -> http://localhost:9999
 ```
 
-Copia quell'URL (`https://1a2b-3c4d.ngrok-free.app`): è l'indirizzo che dovrai
+Copia quell'URL (`https://1a2b-3c4d.ngrok-free.dev`): è l'indirizzo che dovrai
 comunicare a Manus.
 
-> **Nota:** con il piano gratuito di ngrok l'URL **cambia a ogni riavvio**. Se riavvii
-> ngrok, dovrai aggiornare l'URL su Manus.
+> **Nota sul piano gratuito di ngrok (aggiornato 2026):**
+> - Il dominio assegnato è del tipo `xxxx.ngrok-free.dev`.
+> - L'URL **cambia a ogni riavvio**: se riavvii ngrok, aggiorna l'URL su Manus.
+> - Le sessioni hanno un **limite di durata** (circa 2 ore): allo scadere il tunnel
+>   si chiude e dovrai rilanciarlo (ottenendo un nuovo URL).
+> - ngrok mostra una **pagina di avviso** ai visitatori; la skill la aggira già
+>   inviando l'header `ngrok-skip-browser-warning: true`.
+>
+> In ogni caso, **copia sempre l'indirizzo esatto** che ngrok stampa nella riga
+> `Forwarding`, qualunque sia il suffisso.
 
 ### 5.3 Verifica rapida
 
@@ -128,7 +136,7 @@ il server e il tunnel funzionano correttamente.
 2. Nelle istruzioni di progetto o nel primo messaggio della sessione, **comunica a
    Manus l'URL del tunnel ngrok**. Esempio:
 
-   > L'istanza di Blender è raggiungibile a `https://1a2b-3c4d.ngrok-free.app`
+   > L'istanza di Blender è raggiungibile a `https://1a2b-3c4d.ngrok-free.dev`
    > (porta 9999). Usa la skill blender-manager per inviare i comandi.
 
 3. Da questo momento Manus saprà come inviare comandi Python a Blender.
@@ -152,7 +160,7 @@ def send_command(url, command):
 
 # Aggiunge un cubo all'origine
 send_command(
-    "https://1a2b-3c4d.ngrok-free.app",
+    "https://1a2b-3c4d.ngrok-free.dev",
     "bpy.ops.mesh.primitive_cube_add(location=(0, 0, 0))"
 )
 ```
