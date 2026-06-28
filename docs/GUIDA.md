@@ -15,10 +15,9 @@ sia per chi parte da zero, sia come riferimento per la risoluzione dei problemi.
 5. [Parte 2 — Avvio del server e del tunnel ngrok](#5-parte-2--avvio-del-server-e-del-tunnel-ngrok)
 6. [Parte 3 — Configurazione della skill su Manus](#6-parte-3--configurazione-della-skill-su-manus)
 7. [Parte 4 — Invio dei comandi e primi esempi](#7-parte-4--invio-dei-comandi-e-primi-esempi)
-8. [Parte 5 — Integrazione con Ollama (opzionale)](#8-parte-5--integrazione-con-ollama-opzionale)
-9. [Sicurezza](#9-sicurezza)
-10. [Risoluzione dei problemi](#10-risoluzione-dei-problemi)
-11. [Disinstallazione](#11-disinstallazione)
+8. [Sicurezza](#8-sicurezza)
+9. [Risoluzione dei problemi](#9-risoluzione-dei-problemi)
+10. [Disinstallazione](#10-disinstallazione)
 
 ---
 
@@ -64,7 +63,6 @@ Il progetto è composto da due parti:
 
 - **Blender** 3.0 o superiore (testato su 5.1.2).
 - **ngrok** installato e configurato con un account gratuito ([ngrok.com](https://ngrok.com)).
-- *(Facoltativo)* **Ollama** in esecuzione su `localhost:11434` per usare LLM locali.
 - Una connessione a Internet attiva.
 
 ---
@@ -196,24 +194,7 @@ In caso di errore nel comando:
 
 ---
 
-## 8. Parte 5 — Integrazione con Ollama (opzionale)
-
-Se hai Ollama in esecuzione, la skill può interrogare modelli LLM locali.
-
-```python
-# Elenco dei modelli disponibili
-GET http://localhost:11434/api/tags
-
-# Generazione di testo
-POST http://localhost:11434/api/generate
-{ "model": "llama3", "prompt": "..." }
-```
-
-Usa i modelli locali per le elaborazioni che richiedono riservatezza.
-
----
-
-## 9. Sicurezza
+## 8. Sicurezza
 
 > ⚠️ **Leggi attentamente.** Questo strumento esegue codice Python arbitrario ricevuto
 > via HTTP, senza autenticazione integrata.
@@ -232,7 +213,7 @@ Usa i modelli locali per le elaborazioni che richiedono riservatezza.
 
 ---
 
-## 10. Risoluzione dei problemi
+## 9. Risoluzione dei problemi
 
 | Problema | Causa probabile | Soluzione |
 |----------|-----------------|-----------|
@@ -260,7 +241,7 @@ print(hasattr(manus_bridge, "_process_command_queue"))  # deve stampare True
 
 ---
 
-## 11. Disinstallazione
+## 10. Disinstallazione
 
 1. In Blender: **Edit → Preferences → Add-ons**, cerca **ManusBridge** e disabilitalo,
    poi clicca **Remove** per rimuoverlo.

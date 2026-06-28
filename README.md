@@ -28,7 +28,7 @@ I comandi inviati al server HTTP vengono accodati e poi eseguiti nel **main thre
 | Componente | Descrizione |
 |------------|-------------|
 | `manus_bridge/__init__.py` | Addon Blender: server HTTP su porta `9999`, esecuzione comandi nel main thread, pannello nella N-sidebar. |
-| `blender-manager.skill` | Skill per Manus: protocollo di comunicazione, workflow di automazione Blender, integrazione Ollama. |
+| `blender-manager.skill` | Skill per Manus: protocollo di comunicazione e workflow di automazione Blender. |
 
 ---
 
@@ -36,7 +36,6 @@ I comandi inviati al server HTTP vengono accodati e poi eseguiti nel **main thre
 
 - **Blender** 3.0+ (testato su 5.1.2)
 - **ngrok** (o tunnel equivalente) per esporre la porta `9999`
-- *(opzionale)* **Ollama** in ascolto su `11434` per LLM locali
 - Lato client: Python con `requests` per inviare i comandi
 
 ---
