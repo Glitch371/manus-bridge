@@ -133,4 +133,12 @@ Questo strumento è pensato per **uso locale/personale e ambienti fidati**. Risc
 
 ## Licenza
 
-Specifica una licenza prima di pubblicare (es. MIT). Crea un file `LICENSE` nella root.
+Distribuito sotto licenza **GNU General Public License v3.0** — vedi il file [`LICENSE`](LICENSE).
+
+La GPL è la scelta corretta per un addon Blender: l'API `bpy` di Blender è essa stessa
+GPL, quindi gli addon che la utilizzano sono considerati opere derivate e vanno
+distribuiti con una licenza compatibile con la GPL. Chiunque può usare, modificare e
+ridistribuire questo software, anche commercialmente, a condizione di mantenere la
+licenza GPL e l'attribuzione all'autore originale.
+
+Copyright (c) 2026 Glitch371.
