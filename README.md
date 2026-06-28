@@ -4,6 +4,8 @@ Ponte HTTP diretto tra **Manus AI** (o qualsiasi client) e **Blender 3D**, pensa
 
 > ⚠️ **Avviso di sicurezza — leggi prima di usare.** Questo addon avvia un server HTTP che esegue **codice Python arbitrario** inviato via richiesta `POST`. Se lo esponi con ngrok, *chiunque* abbia l'URL può eseguire codice sulla tua macchina con i permessi di Blender. Vedi la sezione [Sicurezza](#sicurezza).
 
+> 📖 **Guida completa passo-passo:** [`docs/GUIDA.md`](docs/GUIDA.md) — installazione, ngrok, skill, esempi e troubleshooting.
+
 ---
 
 ## Architettura
